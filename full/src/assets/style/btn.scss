@@ -1,0 +1,29 @@
+.btn{
+  background-color: #212121;
+  border-radius: 4px;
+  width: 100%;
+  color: #fff;
+  text-transform: uppercase;
+  border: none;
+  transition: 0.3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  &:hover{
+    background-color: lighten(#212121,20);
+  }
+  &__md{
+    max-width: 160px;
+    height: 48px;
+  }
+  &--xl{
+    max-width: 238px;
+    height: 58px;
+  }
+  &__icon{
+    width: 16px;
+    margin-left: 10px;
+    display: block;
+  }
+}

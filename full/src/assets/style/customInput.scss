@@ -1,0 +1,10 @@
+.custom-input{
+  width: 100%;
+  height: 84px;
+  border: none;
+  padding: 0 38px;
+  font-family: 'Archivo Black',sans-serif;
+  &::placeholder{
+    color: #000;
+  }
+}

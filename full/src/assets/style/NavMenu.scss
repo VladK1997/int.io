@@ -1,0 +1,41 @@
+.nav-menu{
+  display: flex;
+  align-items: center;
+  &__link{
+    font-family: "Courier",serif;
+    font-size: 16px;
+    line-height: 18px;
+    text-decoration: none;
+    display: block;
+    padding: 0 5px;
+    color: #000;
+    transition: 0.3s;
+    &:hover{
+      color: #0066FF;
+    }
+    &:not(:last-child){
+      margin-right: 28px;
+    }
+  }
+}
+@media all and(max-width: 768px){
+  .nav-menu{
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    z-index: 10;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    .btn{
+      margin-top: 34px;
+    }
+    &__link{
+      &:nth-of-type(n){
+        margin: 0;
+        margin-bottom: 20px;
+      }
+    }
+  }
+}

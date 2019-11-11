@@ -1,0 +1,95 @@
+.nav-filter{
+  margin-right: 47px;
+  max-width: 348px;
+  border: 1px solid #EAEAEA;
+  border-radius: 3px;
+  padding: 54px 32px;
+  flex-shrink: 0;
+  &__title{
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 22px;
+    line-height: 24px;
+    margin-bottom: 34px;
+  }
+  &__figure{
+    font-family: 'Archivo Black', sans-serif;
+    font-weight: lighter;
+    font-size: 12px;
+    line-height: 13px;
+    color: #0066FF;
+  }
+  &__check{
+    display: flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    input{
+      display: none;
+    }
+    &:not(:last-child){
+      margin-bottom: 20px;
+    }
+  }
+  &__custom-checkbox{
+    width: 22px;
+    height: 22px;
+    border-radius: 3px;
+    position: relative;
+    border: 1px solid #000;
+    margin-right: 18px;
+
+    &:after{
+      transition: 0.3s;
+      width: 8px;
+      height: 12px;
+      border-bottom: 4px solid #0066FF;
+      border-right: 4px solid #0066FF;
+      position: absolute;
+      top: 40%;
+      left: 50%;
+      content: "";
+
+      transform: translate(-50%, -50%) rotate(40deg) scale(0);
+    }
+  }
+  &__check:hover .nav-filter__text{
+    color: #0066FF;
+  }
+  &__check:hover &__custom-checkbox {
+    border-color: #0066FF;
+  }
+  &__view-all{
+    color: #0066FF;
+    font-size: 14px;
+    line-height: 16px;
+    cursor: pointer;
+  }
+  &__text{
+    transition: 0.3s;
+  }
+  &__check input:checked {
+    + .nav-filter__custom-checkbox + .nav-filter__text{
+      color: #0066FF;
+    }
+    + .nav-filter__custom-checkbox {
+      border-color: #0066FF;
+      &:after {
+        transition-timing-function: cubic-bezier(.17,.67,0,1.8);
+        transform: translate(-50%, -50%) rotate(40deg) scale(1);
+
+      }
+    }
+  }
+}
+
+@media all and(max-width: 768px) {
+  .nav-filter{
+    position: absolute;
+    top: 88px;
+    left: 0;
+    background-color: #fff;
+    z-index: 2;
+    max-width: none;
+    width: 100%;
+  }
+}

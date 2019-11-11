@@ -1,0 +1,141 @@
+.item{
+  &__char{
+    font-size: 18px;
+    line-height: 21px;
+    &:not(:last-child){
+     margin-bottom: 14px;
+    }
+  }
+  &__main-info{
+    display: flex;
+    justify-content: space-between;
+    .main-card{
+      flex-shrink: 0;
+    }
+  }
+  &__subtitle{
+    margin-bottom: 24px;
+    font-size: 22px;
+    line-height: 25px;
+  }
+  &__copy-url{
+    font-size: 18px;
+    line-height: 21px;
+    color: $blue;
+    text-transform: capitalize;
+    cursor: pointer;
+    margin-top: auto;
+  }
+  &__layout{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 75px;
+  }
+  &__feedback{
+    position: relative;
+    margin-top: 225px;
+    margin-bottom: 120px;
+    .feedback__img{
+      max-width: 530px;
+      margin-right: 0;
+    }
+  }
+}
+.item-card{
+  background-color: #fff;
+  box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.15);
+  border-radius: 11px;
+  padding: 34px;
+  width: 32%;
+  max-width: 382px;
+  min-width: 300px;
+  &:not(:nth-of-type(3n)){
+    margin-right: 23px;
+  }
+  &:nth-of-type(n+4){
+    margin-top: 23px;
+  }
+  &__desc{
+    font-family: 'Archivo', sans-serif;
+    font-size: 60px;
+    line-height: 65px;
+    margin-top: 90px;
+    color: $blue;
+    width: 100%;
+    overflow: hidden;
+  }
+}
+@media all and (max-width: 1300px) {
+  .item {
+    &__feedback {
+      .feedback__img {
+        width: 400px;
+      }
+    }
+  }
+  .item-card{
+    &__desc{
+      font-size: 45px;
+    }
+  }
+}
+@media all and (max-width: 1220px) {
+  .item-card{
+    width: 49%;
+    max-width: none;
+    &:not(:nth-of-type(3n)){
+      margin-right: 0;
+    }
+    &:nth-of-type(n+3){
+      margin-top: 2%;
+    }
+    &:nth-of-type(2n - 1) {
+      margin-right: 2%
+    }
+  }
+}
+@media all and (max-width: 1100px) {
+  .item {
+    &__feedback {
+      .feedback__img {
+        width: 350px;
+      }
+    }
+  }
+}
+@media all and (max-width: 768px) {
+  .item {
+    &__main-info{
+      padding-top: 40px;
+    }
+    &__char {
+      font-size: 18px;
+      line-height: 21px;
+    }
+    &__main-info{
+      flex-wrap: wrap-reverse;
+    }
+    .main-card--xl .main-card__square{
+      margin-bottom: 40px;
+    }
+  }
+  .item-card{
+    width: 100%;
+    &:nth-of-type(n){
+      margin-right: 0;
+      margin-top: 25px;
+    }
+    &__desc{
+      font-size: 40px;
+    }
+  }
+}
+@media all and (max-width: 576px) {
+  .item {
+    &__feedback {
+      .feedback__img {
+        width: 300px;
+      }
+    }
+  }
+}

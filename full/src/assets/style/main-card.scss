@@ -1,0 +1,116 @@
+.main-card{
+  width: 31%;
+  position: relative;
+  background-color: #fff;
+  &:hover &__square{
+    background-color: $blue;
+  }
+  &--xl{
+    max-width: 340px;
+  }
+  &--small{
+    &:nth-of-type(n+4){
+      margin-top: 50px;
+    }
+    &:not(:nth-of-type(3n)){
+      margin-right: 27px;
+    }
+  }
+  &__square{
+    position: relative;
+    width: 100%;
+    padding-top: 100%;
+    background-color: #212121;
+    border-radius: 11px;
+    margin-bottom: 25px;
+    transition: 0.3s;
+  }
+  &__square-content{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    padding: 30px;
+  }
+  &__abbr{
+    display: block;
+    font-size: 45px;
+    line-height: 49px;
+    font-family: 'Archivo Black', sans-serif;
+  }
+  &__subtitle{
+    font-size: 24px;
+    line-height: 26px;
+    font-family: 'Archivo Black', sans-serif;
+  }
+  &__title{
+    font-size: 22px;
+    line-height: 25px;
+    text-transform: capitalize;
+  }
+  &__desc{
+    font-size: 18px;
+    margin-top: 15px;
+  }
+  &__link{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+  &--xl{
+
+  }
+  &--xl &__square{
+    margin-bottom: 0;
+    padding-top: 87.6%;
+  }
+}
+@media all and (max-width: 1300px) {
+  .main-card{
+    &--small{
+      width: 30%;
+
+    }
+  }
+}
+@media all and (max-width: 1100px) {
+  .main-card{
+    &--small{
+      width: 49%;
+      &:nth-of-type(n){
+        margin: 0;
+      }
+      &:nth-of-type(2n){
+        margin-left: auto;
+      }
+      &:nth-of-type(n+3){
+        margin-top: 60px;
+      }
+    }
+  }
+}
+@media all and (max-width: 768px) {
+  .main-card {
+    width: 49%;
+
+  }
+}
+@media all and (max-width: 576px) {
+  .main-card {
+    width: 100%;
+    max-width: none;
+    &--small{
+      &:nth-of-type(n+2){
+        margin-top: 60px;
+      }
+    }
+  }
+}
